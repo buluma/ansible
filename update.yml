@@ -1,0 +1,8 @@
+- name: update software on hosts
+  hosts: all:!localhost
+  become: yes
+  gather_facts: no
+  
+  roles:
+    - role: buluma.bootstrap
+    - role: buluma.update

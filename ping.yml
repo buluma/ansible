@@ -1,0 +1,9 @@
+---
+- name: ping all servers
+  hosts: all
+  gather_facts: no
+  become: no
+
+  tasks:
+    - name: ping machine
+      action: ping
